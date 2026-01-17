@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QCM - MERISE et SQL</title>
+    <link rel="stylesheet" href="qcm-style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>QCM - MERISE et SQL</h1>
+            <p>Testez vos connaissances sur la modélisation de données et SQL</p>
+            <div class="progress-bar">
+                <div class="progress" id="progressBar"></div>
+            </div>
+            <p class="progress-text"><span id="currentQuestion">0</span> / 30 questions</p>
+        </header>
+
+        <main>
+            <form id="qcmForm">
+                <!-- Questions à choix multiples simples (1-10) -->
+                <section class="question-section">
+                    <h2>🔹 Questions à choix multiples simples</h2>
+
+                    <div class="question" data-question="1">
+                        <h3>1. Qu'est-ce qu'une Igouda ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q1" value="a"> a) Un type de base de données</label>
+                            <label><input type="radio" name="q1" value="b"> b) Un grenier collectif marocain servant à stocker les récoltes</label>
+                            <label><input type="radio" name="q1" value="c"> c) Une méthode de modélisation</label>
+                            <label><input type="radio" name="q1" value="d"> d) Un langage SQL</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="2">
+                        <h3>2. MERISE est une méthode de modélisation qui propose :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q2" value="a"> a) Un seul modèle conceptuel</label>
+                            <label><input type="radio" name="q2" value="b"> b) Deux types de modèles: MCD (données) et MCT (traitements)</label>
+                            <label><input type="radio" name="q2" value="c"> c) Uniquement le modèle logique</label>
+                            <label><input type="radio" name="q2" value="d"> d) Que le modèle physique</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="3">
+                        <h3>3. MCD signifie :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q3" value="a"> a) Modèle Conceptuel des Données</label>
+                            <label><input type="radio" name="q3" value="b"> b) Modèle Créatif des Diagrammes</label>
+                            <label><input type="radio" name="q3" value="c"> c) Modèle Cartographique Digital</label>
+                            <label><input type="radio" name="q3" value="d"> d) Modèle de Calcul Distribué</label>
+                        </div>
+                        <div class="feedback" data-answer="a"></div>
+                    </div>
+
+                    <div class="question" data-question="4">
+                        <h3>4. MLD signifie :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q4" value="a"> a) Modèle Logique des Données</label>
+                            <label><input type="radio" name="q4" value="b"> b) Modèle Linéaire de Distribution</label>
+                            <label><input type="radio" name="q4" value="c"> c) Machine Learning Design</label>
+                            <label><input type="radio" name="q4" value="d"> d) Modèle de Langage Digital</label>
+                        </div>
+                        <div class="feedback" data-answer="a"></div>
+                    </div>
+
+                    <div class="question" data-question="5">
+                        <h3>5. Dans le modèle des Igoudars, la table IGOUDA représente :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q5" value="a"> a) Les personnes qui gèrent les greniers</label>
+                            <label><input type="radio" name="q5" value="b"> b) L'entité principale du grenier collectif</label>
+                            <label><input type="radio" name="q5" value="c"> c) Les types de récoltes</label>
+                            <label><input type="radio" name="q5" value="d"> d) Les dates de stockage</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="6">
+                        <h3>6. La table CASE dans le modèle Igouda représente :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q6" value="a"> a) Les résidents du grenier</label>
+                            <label><input type="radio" name="q6" value="b"> b) Les sections/compartiments du grenier</label>
+                            <label><input type="radio" name="q6" value="c"> c) Les dates d'accès</label>
+                            <label><input type="radio" name="q6" value="d"> d) Les quantités totales</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="7">
+                        <h3>7. La table TENTENA stocke :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q7" value="a"> a) Les stocks de récoltes dans chaque case</label>
+                            <label><input type="radio" name="q7" value="b"> b) Les noms des greniers</label>
+                            <label><input type="radio" name="q7" value="c"> c) Les années de construction</label>
+                            <label><input type="radio" name="q7" value="d"> d) Les règles d'accès</label>
+                        </div>
+                        <div class="feedback" data-answer="a"></div>
+                    </div>
+
+                    <div class="question" data-question="8">
+                        <h3>8. Parmi les trois tables (IGOUDA, CASE, TENTENA), laquelle représente les détails de stockage ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q8" value="a"> a) IGOUDA</label>
+                            <label><input type="radio" name="q8" value="b"> b) CASE</label>
+                            <label><input type="radio" name="q8" value="c"> c) TENTENA</label>
+                            <label><input type="radio" name="q8" value="d"> d) Aucune de ces tables</label>
+                        </div>
+                        <div class="feedback" data-answer="c"></div>
+                    </div>
+
+                    <div class="question" data-question="9">
+                        <h3>9. Quelle est la progression correcte en MERISE ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q9" value="a"> a) MCD → MLD → Physique</label>
+                            <label><input type="radio" name="q9" value="b"> b) MLD → MCD → Physique</label>
+                            <label><input type="radio" name="q9" value="c"> c) Physique → MLD → MCD</label>
+                            <label><input type="radio" name="q9" value="d"> d) MCD → Physique → MLD</label>
+                        </div>
+                        <div class="feedback" data-answer="a"></div>
+                    </div>
+
+                    <div class="question" data-question="10">
+                        <h3>10. Quel langage utilise-t-on pour créer et manipuler les tables du MLD ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q10" value="a"> a) MERISE</label>
+                            <label><input type="radio" name="q10" value="b"> b) SQL</label>
+                            <label><input type="radio" name="q10" value="c"> c) MCD</label>
+                            <label><input type="radio" name="q10" value="d"> d) UML</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+                </section>
+
+                <!-- Questions à choix multiples guidés (11-20) -->
+                <section class="question-section">
+                    <h2>🔹 Questions à choix multiples guidés</h2>
+
+                    <div class="question" data-question="11">
+                        <h3>11. Quelle est la différence entre MCD et MLD ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q11" value="a"> a) MCD est conceptuel et indépendant du SGBD, MLD dépend du SGBD choisi</label>
+                            <label><input type="radio" name="q11" value="b"> b) Aucune différence, ce sont les mêmes</label>
+                            <label><input type="radio" name="q11" value="c"> c) MLD est le MCD traduit en tables SQL</label>
+                            <label><input type="radio" name="q11" value="d"> d) MCD et MLD ne sont utilisés que pour les Igoudars</label>
+                        </div>
+                        <div class="feedback" data-answer="a"></div>
+                    </div>
+
+                    <div class="question" data-question="12">
+                        <h3>12. Dans le modèle Igouda, comment associer les données de stockage (TENTENA) à une case (CASE) ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q12" value="a"> a) Par une clé primaire</label>
+                            <label><input type="radio" name="q12" value="b"> b) Par une clé étrangère reliant TENTENA à CASE</label>
+                            <label><input type="radio" name="q12" value="c"> c) Aucun lien n'est nécessaire</label>
+                            <label><input type="radio" name="q12" value="d"> d) Par une jointure manuelle en SQL</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="13">
+                        <h3>13. Quelle cardinalité décrit la relation entre IGOUDA et CASE ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q13" value="a"> a) Un grenier a une seule case</label>
+                            <label><input type="radio" name="q13" value="b"> b) Un grenier a plusieurs cases, une case appartient à un seul grenier</label>
+                            <label><input type="radio" name="q13" value="c"> c) Une case a plusieurs greniers</label>
+                            <label><input type="radio" name="q13" value="d"> d) Pas de relation entre ces deux tables</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="14">
+                        <h3>14. Comment traduire une association binaire (1,N)-(0,N) en MLD ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q14" value="a"> a) Ajouter une colonne à chaque table</label>
+                            <label><input type="radio" name="q14" value="b"> b) Créer une nouvelle table intermédiaire</label>
+                            <label><input type="radio" name="q14" value="c"> c) Migrer la clé du côté du N vers le côté du 1</label>
+                            <label><input type="radio" name="q14" value="d"> d) Fusionner les deux tables</label>
+                        </div>
+                        <div class="feedback" data-answer="c"></div>
+                    </div>
+
+                    <div class="question" data-question="15">
+                        <h3>15. Quel est l'intérêt principal de normaliser les données en MLD ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q15" value="a"> a) Augmenter la taille de la base</label>
+                            <label><input type="radio" name="q15" value="b"> b) Éliminer la redondance et prévenir les anomalies</label>
+                            <label><input type="radio" name="q15" value="c"> c) Ajouter des clés primaires</label>
+                            <label><input type="radio" name="q15" value="d"> d) Accélérer les requêtes SQL</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="16">
+                        <h3>16. Comment ajouter un nouveau stock (TENTENA) pour une case ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q16" value="a"> a) INSERT INTO CASE</label>
+                            <label><input type="radio" name="q16" value="b"> b) INSERT INTO TENTENA avec la clé étrangère de CASE</label>
+                            <label><input type="radio" name="q16" value="c"> c) UPDATE IGOUDA</label>
+                            <label><input type="radio" name="q16" value="d"> d) DELETE FROM CASE</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="17">
+                        <h3>17. Quelle clause SQL filtre les lignes avant regroupement ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q17" value="a"> a) HAVING</label>
+                            <label><input type="radio" name="q17" value="b"> b) WHERE</label>
+                            <label><input type="radio" name="q17" value="c"> c) GROUP BY</label>
+                            <label><input type="radio" name="q17" value="d"> d) ORDER BY</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="18">
+                        <h3>18. Quelle fonction SQL calcule la quantité totale de stocks ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q18" value="a"> a) COUNT()</label>
+                            <label><input type="radio" name="q18" value="b"> b) SUM()</label>
+                            <label><input type="radio" name="q18" value="c"> c) AVG()</label>
+                            <label><input type="radio" name="q18" value="d"> d) MAX()</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="19">
+                        <h3>19. Pour joindre IGOUDA et CASE, quelle clause utilise-t-on ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q19" value="a"> a) WHERE IGOUDA = CASE</label>
+                            <label><input type="radio" name="q19" value="b"> b) JOIN ... ON condition_clé</label>
+                            <label><input type="radio" name="q19" value="c"> c) UNION</label>
+                            <label><input type="radio" name="q19" value="d"> d) GROUP BY</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="20">
+                        <h3>20. Quelle est la clé primaire de la table TENTENA ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q20" value="a"> a) Un simple identifiant TENTENA_ID</label>
+                            <label><input type="radio" name="q20" value="b"> b) La combinaison (CASE_ID, Type_Culture)</label>
+                            <label><input type="radio" name="q20" value="c"> c) Aucune clé primaire</label>
+                            <label><input type="radio" name="q20" value="d"> d) CASE_ID uniquement</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+                </section>
+
+                <!-- Questions à réponses courtes (21-25) -->
+                <section class="question-section">
+                    <h2>🔹 Questions à réponses courtes avec choix proposés</h2>
+
+                    <div class="question" data-question="21">
+                        <h3>21. Quel est le type de données pour stocker le nom d'une culture dans TENTENA ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q21" value="a"> a) INTEGER</label>
+                            <label><input type="radio" name="q21" value="b"> b) VARCHAR(50)</label>
+                            <label><input type="radio" name="q21" value="c"> c) DATE</label>
+                            <label><input type="radio" name="q21" value="d"> d) BOOLEAN</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="22">
+                        <h3>22. Quelle est l'ordre correct pour transformer un MCD en tables SQL ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q22" value="a"> a) Traduire MCD → MLD → CREATE TABLE</label>
+                            <label><input type="radio" name="q22" value="b"> b) CREATE TABLE directement depuis MCD</label>
+                            <label><input type="radio" name="q22" value="c"> c) Créer les clés étrangères avant les clés primaires</label>
+                            <label><input type="radio" name="q22" value="d"> d) MCD → Physique → MLD</label>
+                        </div>
+                        <div class="feedback" data-answer="a"></div>
+                    </div>
+
+                    <div class="question" data-question="23">
+                        <h3>23. Quelle clause SQL regroupe les résultats par grenier (IGOUDA) ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q23" value="a"> a) WHERE IGOUDA_ID</label>
+                            <label><input type="radio" name="q23" value="b"> b) GROUP BY IGOUDA_ID</label>
+                            <label><input type="radio" name="q23" value="c"> c) ORDER BY IGOUDA_ID</label>
+                            <label><input type="radio" name="q23" value="d"> d) DISTINCT IGOUDA_ID</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="24">
+                        <h3>24. Quel type de langage SQL est utilisé pour créer la table IGOUDA ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q24" value="a"> a) DML (Data Manipulation Language)</label>
+                            <label><input type="radio" name="q24" value="b"> b) DDL (Data Definition Language)</label>
+                            <label><input type="radio" name="q24" value="c"> c) DCL (Data Control Language)</label>
+                            <label><input type="radio" name="q24" value="d"> d) TCL (Transaction Control Language)</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="25">
+                        <h3>25. Comment assurer que chaque case (CASE) appartient à un grenier valide (IGOUDA) ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q25" value="a"> a) En utilisant une PRIMARY KEY dans CASE</label>
+                            <label><input type="radio" name="q25" value="b"> b) En créant une FOREIGN KEY reliant CASE à IGOUDA</label>
+                            <label><input type="radio" name="q25" value="c"> c) Par une simple jointure</label>
+                            <label><input type="radio" name="q25" value="d"> d) En dupliquant les données</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+                </section>
+
+                <!-- Questions Vrai/Faux (26-30) -->
+                <section class="question-section">
+                    <h2>🔹 Vrai ou Faux</h2>
+
+                    <div class="question" data-question="26">
+                        <h3>26. Le MCD est indépendant du système informatique et peut être réutilisé pour différents SGBD.</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q26" value="a"> Vrai</label>
+                            <label><input type="radio" name="q26" value="b"> Faux</label>
+                        </div>
+                        <div class="feedback" data-answer="a"></div>
+                    </div>
+
+                    <div class="question" data-question="27">
+                        <h3>27. Dans le modèle Igouda, une case (CASE) peut appartenir à plusieurs greniers (IGOUDA).</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q27" value="a"> Vrai</label>
+                            <label><input type="radio" name="q27" value="b"> Faux</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="28">
+                        <h3>28. Une clé étrangère peut accepter les valeurs NULL.</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q28" value="a"> Vrai</label>
+                            <label><input type="radio" name="q28" value="b"> Faux</label>
+                        </div>
+                        <div class="feedback" data-answer="a"></div>
+                    </div>
+
+                    <div class="question" data-question="29">
+                        <h3>29. Le MLD est directement exécutable sur un SGBD sans besoin de transformation supplémentaire.</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q29" value="a"> Vrai</label>
+                            <label><input type="radio" name="q29" value="b"> Faux</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="30">
+                        <h3>30. Les trois tables IGOUDA, CASE et TENTENA doivent toujours être créées en même temps avec leurs clés étrangères.</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q30" value="a"> Vrai</label>
+                            <label><input type="radio" name="q30" value="b"> Faux</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+                </section>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-reset" onclick="resetForm()">🔄 Réinitialiser</button>
+                    <button type="submit" class="btn-submit">✓ Corriger</button>
+                </div>
+            </form>
+        </main>
+
+        <!-- Résultats -->
+        <div id="resultsModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeResults()">&times;</span>
+                <h2>Résultats</h2>
+                <div class="results-score">
+                    <div class="score-display">
+                        <span class="score-number" id="scoreNumber">0</span>
+                        <span class="score-percent">%</span>
+                    </div>
+                    <div class="score-text" id="scoreText"></div>
+                </div>
+                <div id="resultsList"></div>
+                <div class="modal-actions">
+                    <button class="btn-primary" onclick="closeResults()">Fermer</button>
+                    <button class="btn-secondary" onclick="resetForm()">Recommencer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="qcm-script.js"></script>
+</body>
+</html>
